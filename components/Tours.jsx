@@ -37,7 +37,7 @@ export default function Tours() {
         </h2>
         <p className='text-center w-full md:w-9/12 lg:w-7/12 mx-auto mt-6 lg:mt-8 2xl:mt-10 mb-8' style={didot.style}>Contamos con los mejores paquetes del mercado para que no tengas que preocuparte por temas como alojamiento, vuelos, comida o actividades, también disponemos de una gran red de aliados que nos permiten ofrecer la experiencia más completa e inolvidable de tu vida.</p>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center my-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-0 place-items-center my-8'>
             {TOURS.map( (tour, index) =>(
                 <ToursCards tour={tour} key={index} />
             ) )}
