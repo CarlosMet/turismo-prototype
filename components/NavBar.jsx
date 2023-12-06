@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import React from 'react'
 
 export default function NavBar() {
@@ -12,7 +13,9 @@ export default function NavBar() {
         </div>
 
         <div className='flex flex-col items-center w-1/2 lg:w-4/12 py-2'>
-            <img src="https://i.imgur.com/nJDc9GU.png" className='w-full' alt="" />
+            <Link href={'/'}>
+                <img src="https://i.imgur.com/nJDc9GU.png" className='w-full' alt="" />
+            </Link>
         </div>
 
         <div className='w-1/2 lg:w-4/12 justify-end hidden lg:flex'>

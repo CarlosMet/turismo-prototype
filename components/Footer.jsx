@@ -3,9 +3,9 @@ import React from 'react'
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
-export default function Footer() {
+export default function Footer({color = 'white'}) {
   return (
-    <footer className='px-5 md:px-24 lg:px-64 xl:px-72 2xl:px-96 py-4'>
+    <footer className={color === 'black' ? 'px-5 md:px-24 lg:px-64 xl:px-72 2xl:px-96 py-4 bg-black text-white' : 'px-5 md:px-24 lg:px-64 xl:px-72 2xl:px-96 py-4'}>
         <ul className='flex justify-between'>
             <li>
                 <p className='mb-3 font-bold'>Contáctanos</p>

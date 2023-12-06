@@ -1,6 +1,8 @@
 import { GFS_Didot, Roboto } from 'next/font/google'
 import React from 'react'
 import ToursCards from './ToursCards'
+import Link from 'next/link'
+import localFont from 'next/font/local'
 
 const didot = GFS_Didot({
     weight:['400'],
@@ -11,6 +13,8 @@ const roboto = Roboto({
     subsets:['latin'],
     weight:['700', '900']
 })
+
+const localDidot = localFont({src:'../fonts/DidotRegular.ttf'})
 
 export default function Tours() {
     const TOURS = [{
@@ -38,9 +42,14 @@ export default function Tours() {
         <p className='text-center w-full md:w-9/12 lg:w-7/12 mx-auto mt-6 lg:mt-8 2xl:mt-10 mb-8' style={didot.style}>Contamos con los mejores paquetes del mercado para que no tengas que preocuparte por temas como alojamiento, vuelos, comida o actividades, también disponemos de una gran red de aliados que nos permiten ofrecer la experiencia más completa e inolvidable de tu vida.</p>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-0 place-items-center my-8'>
-            {TOURS.map( (tour, index) =>(
+            {TOURS.slice(0, 3).map( (tour, index) =>(
                 <ToursCards tour={tour} key={index} />
             ) )}
+        </div>
+        <div className='grid place-items-center'>
+                <Link href={'/tours'} >
+                    <button style={didot.style} className='border-2 border-[#ffd64a] text-[#232528] px-7 py-1 text-xl rounded-md'>Ver todos los tours...</button>
+                </Link>
         </div>
     </section>
   )
